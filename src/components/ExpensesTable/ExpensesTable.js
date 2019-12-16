@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
@@ -20,7 +21,7 @@ const Table = styled.table`
   }
 `;
 
-const ExpensesTable = ({ items = [], onRemove }) => (
+const ExpensesTable = ({ el, onRemove }) => (
   <Table>
     <thead>
       <tr>
@@ -30,7 +31,7 @@ const ExpensesTable = ({ items = [], onRemove }) => (
       </tr>
     </thead>
     <tbody>
-      {items.map(({ id, name, amount }) => (
+      {el.map(({ id, name, amount }) => (
         <tr key={id}>
           <td>{name}</td>
           <td>{amount}</td>
@@ -44,7 +45,7 @@ const ExpensesTable = ({ items = [], onRemove }) => (
 );
 
 const mapStateToProps = store => ({
-  items: store.totalExpense,
+  el: store.totalExpense,
 });
 
 const mapDispatchToProps = dispatch => ({

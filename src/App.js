@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // import shortid from 'shortid';
 import BudgetForm from './components/BudgetForm/BudgetForm';
 import ExpenseForm from './components/ExpenseForm/ExpenseForm';
-// import ExpensesTable from './components/ExpensesTable/ExpensesTable';
+import ExpensesTable from './components/ExpensesTable/ExpensesTable';
 import Values from './components/Values/Values';
 
 const Container = styled.div`
@@ -24,7 +24,7 @@ const App = () => {
       <BudgetForm />
       <Values />
       <ExpenseForm />
-      {/* {expenses.length > 0 && <ExpensesTable /> */}
+      <ExpensesTable />
     </Container>
   );
 };

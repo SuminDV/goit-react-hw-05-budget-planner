@@ -2,7 +2,9 @@
   "name": "goit-react-hw-01-component",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sumindv.github.io/goit-react-hw-05-budget-planner/",
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -13,6 +15,8 @@
     "styled-components": "^4.4.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
